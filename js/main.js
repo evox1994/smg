@@ -102,6 +102,8 @@ $(document).ready(function(){
 
 	$('.face-slider').slick();
 
+	$('.b-about-slider').slick();
+
 	$(document).on('click','.filter li',function(){
 		var fil = $(this).attr('data-filter');
 
@@ -137,6 +139,50 @@ $(document).ready(function(){
 		}
 	});
 
+	$(document).on('click','.qwestion',function(){
+		var eh = $(this).parents('li').find('.answer .text').outerHeight();
+		
+		$(this).parents('li').toggleClass('active');
+		if ( $(this).parents('li').hasClass('active') ){
+			$(this).parents('li').find('.answer').animate({'height': eh},300);
+		} else {
+			$(this).parents('li').find('.answer').animate({'height': 0},300);
+		}
+	});
+
+	function scrollBanner(){
+		if ( $('.scroll-wrap-banner').length ){
+			if ( $(window).width() > 768 ) {
+				var vg = $('.scroll-wrap').offset().top - 30;
+				var ng = vg + $('.scroll-wrap').outerHeight() - $('.scroll-wrap-banner').outerHeight();
+				var st = $(window).scrollTop();
+				$('.scroll-wrap').css('min-height',$('.scroll-wrap-banner').outerHeight());
+
+				if ( st > vg ) {
+					if ( st > ng ) {
+						$('.scroll-wrap-banner').removeClass('scroll');
+						$('.scroll-wrap-banner').addClass('bottom');
+					} else {
+						$('.scroll-wrap-banner').addClass('scroll');
+						$('.scroll-wrap-banner').removeClass('bottom');
+					}
+				} else {
+					$('.scroll-wrap-banner').removeClass('scroll');
+					$('.scroll-wrap-banner').removeClass('bottom');
+				}
+			} else {
+				$('.scroll-wrap-banner').removeClass('scroll');
+				$('.scroll-wrap-banner').removeClass('bottom');
+				$('.scroll-wrap').removeAttr('style');
+			}
+		}
+	}
+	scrollBanner();
+
+	$(window).on('scroll',function(){
+		scrollBanner();
+	});
+
 	$(window).resize(function(){
 
 		$('.footer-nav').find('.item.active').each(function(){
@@ -148,6 +194,15 @@ $(document).ready(function(){
 				$(this).find('.item-content').css('height',eh);
 			}
 		});
+
+		if ($('.b-qwestions').length){
+			$('.b-qwestions').find('li.active').each(function(){
+				var eh = $(this).find('.answer .text').outerHeight();
+				$(this).find('.answer').css('height',eh);
+			});
+		}
+
+		scrollBanner();
 
 	});
 
