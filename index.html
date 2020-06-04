@@ -32,7 +32,7 @@
 						<div class="header-phone">
 							<a href="tel:83822903331">8 (3822) 90-33-31</a>
 						</div>
-						<a href="#" class="btn">Заказать звонок</a>
+						<a href="#popup-callback" class="btn fancybox">Заказать звонок</a>
 						<div class="mobile-btn">
 							<div class="mobile-btn-el"></div>
 						</div>
@@ -43,7 +43,40 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="/">Главная</a></li>
-						<li class="li-drop"><a href="/">Услуги</a></li>
+						<li class="li-drop">
+							<span>Услуги</span>
+							<div class="drop">
+								<div class="drop-wrap">
+									<div class="container">
+										<div class="wrap">
+											<ul class="drop-cat">
+												<li data-cat="#cat-1" class="active">Категория</li>
+												<li data-cat="#cat-2">Категория</li>
+												<li data-cat="#cat-3">Категория</li>
+											</ul>
+											<div class="drop-item active" id="cat-1">
+												<ul>
+													<li><a href="/">Услуга</a></li>
+													<li><a href="/">Услуга</a></li>
+													<li><a href="/">Услуга</a></li>
+												</ul>
+											</div>
+											<div class="drop-item" id="cat-2">
+												<ul>
+													<li><a href="/">Услуга</a></li>
+													<li><a href="/">Услуга</a></li>
+												</ul>
+											</div>
+											<div class="drop-item" id="cat-3">
+												<ul>
+													<li><a href="/">Услуга</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
 						<li><a href="/">Акции</a></li>
 						<li><a href="/">Новости</a></li>
 						<li><a href="/">Цены</a></li>
@@ -56,7 +89,44 @@
 				<div class="close-btn"></div>
 				<ul class="nav">
 					<li><a href="/">Главная</a></li>
-					<li class="li-drop"><span>Услуги</span></li>
+					<li class="li-drop">
+						<span>Услуги</span>
+						<div class="drop">
+							<div class="drop-back">Назад</div>
+							<ul class="nav">
+								<li class="li-drop">
+									<span>Категория</span>
+									<div class="drop">
+										<div class="drop-back">Назад</div>
+										<ul class="nav">
+											<li><a href="/">Услуга</a></li>
+											<li><a href="/">Услуга</a></li>
+											<li><a href="/">Услуга</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="li-drop">
+									<span>Категория</span>
+									<div class="drop">
+										<div class="drop-back">Назад</div>
+										<ul class="nav">
+											<li><a href="/">Услуга</a></li>
+											<li><a href="/">Услуга</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="li-drop">
+									<span>Категория</span>
+									<div class="drop">
+										<div class="drop-back">Назад</div>
+										<ul class="nav">
+											<li><a href="/">Услуга</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
 					<li><a href="/">Акции</a></li>
 					<li><a href="/">Новости</a></li>
 					<li><a href="/">Цены</a></li>
@@ -68,7 +138,7 @@
 					<div class="mode">Пн-Пт с 9:00 до 20:00,<br> Сб с 9:00 до 18:00, Вс с 10:00 до 16:00</div>
 				</div>
 				<div class="phone"><a href="tel:83822903331">8 (3822) 90-33-31</a></div>
-				<a href="#" class="btn">Заказать звонок</a>
+				<a href="#popup-callback" class="btn fancybox">Заказать звонок</a>
 			</div>
 		</div>
 
@@ -414,6 +484,22 @@
 		</div>
 
 		<div style="display:none;">
+			<div class="popup" id="popup-callback">
+				<div class="title">Оставьте заявку</div>
+				<div class="subtitle">Наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время</div>
+				<div class="b-form">
+					<form>
+						<div class="b-input">
+							<input type="text" placeholder="Ваше имя">
+						</div>
+						<div class="b-input">
+							<input type="tel" placeholder="Ваш телефон">
+						</div>
+						<button type="submit" class="btn btn-yellow">Отправить</button>
+						<div class="policy-text"><div class="radio-btn active"></div>Я принимаю условия <a href="#" target="_blank">политики<br> обработки персональных данных</a></div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 
