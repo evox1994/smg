@@ -1568,6 +1568,9 @@ body {
 	margin-right: 30px;
 	margin-bottom: 30px;
 	text-align: left;
+	position: relative;
+	padding-bottom: 75px;
+	background-color: #ffffff;
 }
 .b-doctors > li:nth-child(4n) {
 	margin-right: 0;
@@ -1598,6 +1601,14 @@ body {
 .b-doctors > li .text {
 	font-size: 14px;
 	margin-top: 20px;
+}
+.b-doctors > li .btn {
+	width: calc(100% - 50px);
+	max-width: none;
+	position: absolute;
+	left: 25px;
+	bottom: 25px;
+	padding: 15px 10px;
 }
 
 .b-serts {
@@ -1757,6 +1768,49 @@ body {
 	margin-top: 30px;
 }
 
+.b-doctor-scroll {
+	position: relative;
+	padding-left: 340px;
+}
+.b-doctor-scroll .image {
+	width: 100%;
+	max-width: 300px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.b-doctor-scroll .image.scroll {
+	position: fixed;
+	left: calc(50% - 585px);
+	top: 30px;
+}
+.b-doctor-scroll .image.bottom {
+	bottom: 0;
+	top: auto;
+}
+.b-doctor-scroll .image img {
+	display: block;
+	max-width: 100%;
+}
+.b-doctor-scroll .content {
+	position: relative;
+}
+.b-doctor-scroll .content .b-doctor-spec {
+	display: inline-block;
+	padding: 15px 25px;
+	background-color: #f8f8f6;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+.b-doctor-scroll .content .btn {
+	margin-top: 20px;
+	padding: 15px 10px;
+}
+.b-doctor-scroll .content .b-text {
+	margin-top: 30px;
+}
+
 
 
 
@@ -1840,6 +1894,10 @@ body {
 	}
 	.b-doctors > li:nth-child(3n) {
 		margin-right: 0;
+	}
+
+	.b-doctor-scroll .image.scroll {
+		left: 30px;
 	}
 }
 @media screen and (max-width: 1024px){
@@ -2602,6 +2660,7 @@ body {
 		width: calc(50% - 10px);
 		margin-right: 0;
 		margin-bottom: 20px;
+		padding-bottom: 60px;
 	}
 	.b-doctors > li:nth-child(4n) {
 		margin-right: 0;
@@ -2615,6 +2674,12 @@ body {
 	.b-doctors > li .text {
 		font-size: 12px;
 		margin-top: 10px;
+	}
+	.b-doctors > li .btn {
+		padding: 13px 10px;
+		left: 15px;
+		bottom: 15px;
+		width: calc(100% - 30px);
 	}
 
 	.b-serts {
@@ -2690,6 +2755,36 @@ body {
 	}
 	.popup .b-form {
 		margin-top: 15px;
+	}
+
+	.b-doctor-scroll {
+		padding: 0;
+	}
+	.b-doctor-scroll .image {
+		max-width: none;
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	.b-doctor-scroll .image img {
+		margin: 0 auto;
+		max-height: 300px;
+	}
+	.b-doctor-scroll .content {
+		margin-top: 25px;
+		text-align: center;
+	}
+	.b-doctor-scroll .content .b-doctor-spec {
+		padding: 13px 15px;
+		font-size: 14px;
+		margin-top: 15px;
+	}
+	.b-doctor-scroll .content .btn {
+		padding: 13px 10px;
+		margin: 15px auto 0;
+	}
+	.b-doctor-scroll .content .b-text {
+		margin-top: 20px;
 	}
 }
 @media screen and (max-width: 560px){
