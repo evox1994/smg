@@ -1681,6 +1681,7 @@ body {
 	position: relative;
 	padding-bottom: 75px;
 	background-color: #ffffff;
+	height: auto;
 }
 .b-doctors-slider li .image {
 	height: 400px;
