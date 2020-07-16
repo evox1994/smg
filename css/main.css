@@ -1587,7 +1587,7 @@ body {
 }
 .b-doctors > li {
 	width: calc(25% - 22.5px);
-	border: 1px solid #e1e1e1;
+	/*border: 1px solid #e1e1e1;*/
 	border-radius: 10px;
 	overflow: hidden;
 	margin-right: 30px;
@@ -1601,7 +1601,7 @@ body {
 	margin-right: 0;
 }
 .b-doctors > li .image {
-	height: 310px;
+	height: 400px;
 	position: relative;
 }
 .b-doctors > li .image img {
@@ -1614,6 +1614,7 @@ body {
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
+	border-radius: 10px 10px 0 0;
 }
 .b-doctors > li .content {
 	padding: 25px;
@@ -1635,6 +1636,89 @@ body {
 	bottom: 25px;
 	padding: 15px 10px;
 }
+
+.b-doctors-slider {
+	display: none;
+	margin-top: 30px;
+	position: relative;
+	padding: 0 24px;
+}
+.b-doctors-slider .slick-track {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.b-doctors-slider .slick-arrow {
+	display: block;
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	border: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: transparent;
+	position: absolute;
+	top: calc(50% - 12px);
+	z-index: 10;
+}
+.b-doctors-slider .slick-prev {
+	background-image: url('../i/about-prev.png');
+	left: 0;
+}
+.b-doctors-slider .slick-next {
+	background-image: url('../i/about-next.png');
+	right: 0;
+}
+.b-doctors-slider li {
+	/*border: 1px solid #e1e1e1;*/
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 0 10px;
+	text-align: left;
+	position: relative;
+	padding-bottom: 75px;
+	background-color: #ffffff;
+}
+.b-doctors-slider li .image {
+	height: 400px;
+	position: relative;
+}
+.b-doctors-slider li .image img {
+	display: block;
+	max-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 10px 10px 0 0;
+}
+.b-doctors-slider li .content {
+	padding: 15px;
+}
+.b-doctors-slider li .name {
+	font-size: 16px;
+	font-weight: 500;
+	color: #959595;
+}
+.b-doctors-slider li .text {
+	font-size: 12px;
+	margin-top: 10px;
+}
+.b-doctors-slider li .btn {
+	width: calc(100% - 30px);
+	max-width: none;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	padding: 13px 10px;
+}
+
 
 .b-serts {
 	display: -webkit-flex;
@@ -2684,6 +2768,7 @@ body {
 	}
 
 	.b-doctors {
+		display: none;
 		justify-content: space-between;
 		margin-top: 30px;
 	}
@@ -2711,6 +2796,10 @@ body {
 		left: 15px;
 		bottom: 15px;
 		width: calc(100% - 30px);
+	}
+
+	.b-doctors-slider {
+		display: block;
 	}
 
 	.b-serts {
@@ -3002,6 +3091,14 @@ body {
 	.b-stocks > li .text {
 		font-size: 8px;
 		margin-top: 10px;
+	}
+	
+	.b-doctors > li .image {
+	    height: 300px;
+	}
+
+	.b-doctors-slider li .image {
+		height: 300px;
 	}
 
 	.b-docs {

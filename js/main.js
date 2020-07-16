@@ -105,6 +105,19 @@ $(document).ready(function(){
 
 	$('.b-about-slider').slick();
 
+	$('.b-doctors-slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 460,
+				settings:{
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
 	$(document).on('click','.filter li',function(){
 		var fil = $(this).attr('data-filter');
 
