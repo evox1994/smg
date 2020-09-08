@@ -1222,7 +1222,7 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
 }
 .face .wrap .content {
 	width: calc(50% + 15px);
@@ -1250,7 +1250,9 @@ body {
 	display: block;
 	max-width: 100%;
 	max-height: 100%;
-	margin-left: auto;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 .b-advs {
@@ -2152,9 +2154,6 @@ body {
 		width: calc(50% - 15px);
 	}
 
-	.face .wrap {
-		align-items: stretch;
-	}
 	.face .wrap .content {
 		width: calc(60% - 10px);
 		padding: 50px 0;
@@ -2172,6 +2171,7 @@ body {
 		max-width: none;
 		position: absolute;
 		left: 0;
+		right: auto;
 		bottom: 0;
 	}
 
